@@ -1,25 +1,20 @@
 /* Write a Program to convert an array of objects to an object
 	based on a given key */
 
-const myMap = new Map();
+
 
 const convert = (json,key) => {
 	// Write your code here
-	//var prop = key;
-	for(var i=0;i<json.length;i++)
-	{ 	
-		myMap.set(String(json[i].id),json[i]);
+	let myMap = {};
+	if((typeof json == Array ) || key){
+		for(var i=0;i<json.length;i++)	
+			myMap[json[i][key]] = json[i];
+		return myMap;	
 	}
-	return convertToObj(myMap);	
+	else
+		return null;
 };
 
-const convertToObj = (inputMap) => {
-    let obj = {};
-    inputMap.forEach(function(value, key){
-        obj[key] = value
-    });
-    return obj;
-}
 
 /* For example,
 INPUT - convert([{id: 1, value: 'abc'}, {id: 2, value: 'xyz'}], 'id')
@@ -30,5 +25,6 @@ OUTPUT - {
 
 
 */
-convert([{id: 1, value: 'abc'}, {id: 2, value: 'xyz'}], 'id')
+//console.log(convert([{id: 1, value: 'abc'}, {id: 2, value: 'xyz'}], "value"))
+//console.log(convert('MS'));
 module.exports = convert;
