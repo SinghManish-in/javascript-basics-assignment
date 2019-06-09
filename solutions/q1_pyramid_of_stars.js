@@ -5,7 +5,6 @@ const buildPyramid = (pyramidSize) => {
     var pyramid = "";
     for(var i=1;i<pyramidSize+1;i++)
     pyramid = pyramid + getLeadingSpaces(pyramidSize-i)+getStars(i)+"\n";
-    console.log(result)
 };
 
 const getLeadingSpaces = (pyramidSize) => {

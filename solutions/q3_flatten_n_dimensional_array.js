@@ -11,7 +11,6 @@ const flatten = (input) => {
 			result.push(input[i]);
 		}
 	}
-	console.log(result);
 };
 
 const makeArrayFlat = (result,array) => {

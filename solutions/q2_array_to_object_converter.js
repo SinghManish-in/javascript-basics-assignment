@@ -2,24 +2,18 @@
 	based on a given key */
 
 const myMap = new Map();
-class MyData {
-	constructor(key, name) {
-		this.key = key;	
-	  	this.name = name;
-	}
-  }
 
 const convert = (json,key) => {
 	// Write your code here
-	var prop = key;
+	//var prop = key;
 	for(var i=0;i<json.length;i++)
 	{ 	
 		myMap.set(String(json[i].id),json[i]);
 	}
-	console.log(mapToObj(myMap));	
+	return convertToObj(myMap);	
 };
 
-const mapToObj = (inputMap) => {
+const convertToObj = (inputMap) => {
     let obj = {};
     inputMap.forEach(function(value, key){
         obj[key] = value

@@ -18,7 +18,6 @@ const buildStudentDetails = () =>{
         buildStudentObject('Grammer','Accounts',studentDetails)
         buildStudentObject('Grammer','Physics',studentDetails) 
     }
-    console.log(studentDetails);
 }
 
 const buildStudentObject = (subject1,subject2,studentDetails) => {
@@ -29,7 +28,6 @@ const calculatePercentage = () => {
     for(var i=0;i<studentDetails.length;i++){
         studentPercentage.push({name:studentDetails[i].name , percentage:(studentDetails[i].subject1_marks+studentDetails[i].subject2_marks)/2});
     }
-    console.log(studentPercentage);
 }
 
 buildStudentDetails();

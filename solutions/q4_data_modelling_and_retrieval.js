@@ -9,13 +9,14 @@ const fruits = [{name: 'orange', color: 'orange', pricePerKg: "120"},
 {name: 'mango', color: 'green', pricePerKg: "250"},
 {name: 'apple', color: 'red', pricePerKg: "200"}]
 
+const fruitsMap = new Map();
+
 const buildMap = () => {
-    var fruitsMap = new Map();
     for(var i=0;i<fruits.length;i++)
         fruitsMap.set(fruits[i].name,fruits[i]);
-    console.log(fruitsMap.get('orange'));
-    console.log(fruitsMap.get('mango'));
-    console.log(fruitsMap.get('apple'));
 }
 
 buildMap();
+console.log(fruitsMap.get('orange'));
+console.log(fruitsMap.get('mango'));
+console.log(fruitsMap.get('apple'));
