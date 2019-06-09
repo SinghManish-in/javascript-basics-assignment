@@ -1,6 +1,6 @@
 /* Write a Program to convert an array of objects to an object
 	based on a given key */
-	
+
 const myMap = new Map();
 class MyData {
 	constructor(key, name) {
@@ -24,7 +24,6 @@ const mapToObj = (inputMap) => {
     inputMap.forEach(function(value, key){
         obj[key] = value
     });
-
     return obj;
 }
 
