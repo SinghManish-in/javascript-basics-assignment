@@ -27,7 +27,7 @@ const makeArrayFlat = (result,array) => {
 /* For example,
 INPUT - flatten([1, [2, 3], [[4], [5]])
 OUTPUT - [ 1, 2, 3, 4, 5 ]
-
 */
+
 flatten([1, [2, 3], [[4], [5]]]);
 module.exports = flatten;
