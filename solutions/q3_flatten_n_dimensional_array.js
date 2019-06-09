@@ -2,24 +2,29 @@
 
 const flatten = (input) => {
 	// Write your code here
-	var result = new Array();
-	for(var i=0;i<input.length;i++){
-		if(input[i] instanceof Array){
-			makeArrayFlat(result,input[i]);
+
+	var flatArray = new Array();
+	if(typeof input == 'string')
+		flatArray = null;
+	else
+		for(var i=0;i<input.length;i++){
+			if(input[i] instanceof Array){
+				makeArrayFlat(flatArray,input[i]);
+			}
+			else{
+				flatArray.push(input[i]);
+			}
 		}
-		else{
-			result.push(input[i]);
-		}
-	}
+	return flatArray;
 };
 
-const makeArrayFlat = (result,array) => {
+const makeArrayFlat = (flatArray,array) => {
 	for(var i=0;i<array.length;i++)
 		if(array[i] instanceof Array){
-			makeArrayFlat(result,array[i]);
+			makeArrayFlat(flatArray,array[i]);
 		}
 		else{
-			result.push(array[i]);
+			flatArray.push(array[i]);
 		}
 }
 
@@ -28,5 +33,5 @@ INPUT - flatten([1, [2, 3], [[4], [5]])
 OUTPUT - [ 1, 2, 3, 4, 5 ]
 */
 
-flatten([1, [2, 3], [[4], [5]]]);
+console.log(flatten('invalid value'));
 module.exports = flatten;
