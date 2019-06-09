@@ -2,8 +2,11 @@
 	based on a given key */
 
 
-const convert = () => {
+const convert = (json,key) => {
 	// Write your code here
+	var myArray = JSON.parse(json);
+	//console.log(myArray[0]);
+	console.log(key);
 };
 
 /* For example,
@@ -15,5 +18,5 @@ OUTPUT - {
 
 
 */
-
+convert([{id: 1, value: 'abc'}, {id: 2, value: 'xyz'}], 'id')
 module.exports = convert;
