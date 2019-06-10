@@ -12,7 +12,7 @@ const fruits = [{name: 'orange', color: 'orange', pricePerKg: "120"},
 const fruitsMap = new Map();
 
 const buildMap = () => {
-    for(let i=0;i<fruits.length;i++){
+    for(let i=0;i<fruits.length;i+1){
         fruitsMap.set(fruits[i].name,fruits[i]);
     }
 }

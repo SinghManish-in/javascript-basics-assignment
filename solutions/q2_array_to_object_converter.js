@@ -5,7 +5,7 @@ const convert = (json,key) => {
 	// Write your code here
 	let myMap = {};
 	if((typeof json === Array ) || key){
-		for(let i=0;i<json.length;i++){	
+		for(let i=0;i<json.length;i+1){	
 			myMap[json[i][key]] = json[i];
 		}
 		return myMap;	

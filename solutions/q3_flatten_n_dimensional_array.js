@@ -1,7 +1,7 @@
 /* Write a Program to Flatten a given n-dimensional array */
 
 const makeArrayFlat = (flatArray,array) => {
-	for(let i=0;i<array.length;i++){
+	for(let i=0;i<array.length;i+1){
 		if(array[i] instanceof Array){
 			makeArrayFlat(flatArray,array[i]);
 		}
@@ -19,7 +19,7 @@ const flatten = (input) => {
 		flatArray = null;
 	}
 	else{
-		for(let i=0;i<input.length;i++){
+		for(let i=0;i<input.length;i+1){
 			if(input[i] instanceof Array){
 				makeArrayFlat(flatArray,input[i]);
 			}
