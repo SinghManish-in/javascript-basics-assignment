@@ -10,7 +10,7 @@
 // Write your code here
 
 const buildStudentDetails = (studentDetails) =>{
-    for(var i=0;i<50;i++){
+    for(let i=0;i<50;i++){
         buildStudentObject('Grammer','Accounts',studentDetails)
         buildStudentObject('Grammer','Physics',studentDetails) 
     }
@@ -21,7 +21,7 @@ const buildStudentObject = (subject1,subject2,studentDetails) => {
 }
 
 const calculatePercentage = (studentDetails,studentPercentage) => {
-    for(var i=0;i<studentDetails.length;i++)
+    for(let i=0;i<studentDetails.length;i++)
         studentPercentage.push({name:studentDetails[i].name , percentage:(studentDetails[i].subject1_marks+studentDetails[i].subject2_marks)/2});
 }
 

@@ -3,11 +3,11 @@
 const flatten = (input) => {
 	// Write your code here
 
-	var flatArray = new Array();
+	let flatArray = new Array();
 	if(typeof input == 'string')
 		flatArray = null;
 	else
-		for(var i=0;i<input.length;i++){
+		for(let i=0;i<input.length;i++){
 			if(input[i] instanceof Array){
 				makeArrayFlat(flatArray,input[i]);
 			}
@@ -19,7 +19,7 @@ const flatten = (input) => {
 };
 
 const makeArrayFlat = (flatArray,array) => {
-	for(var i=0;i<array.length;i++)
+	for(let i=0;i<array.length;i++)
 		if(array[i] instanceof Array){
 			makeArrayFlat(flatArray,array[i]);
 		}
