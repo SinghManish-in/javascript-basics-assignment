@@ -21,8 +21,9 @@ const buildStudentObject = (subject1,subject2,studentDetails) => {
 }
 
 const calculatePercentage = (studentDetails,studentPercentage) => {
-    for(let i=0;i<studentDetails.length;i++)
+    for(let i=0;i<studentDetails.length;i++){
         studentPercentage.push({name:studentDetails[i].name , percentage:(studentDetails[i].subject1_marks+studentDetails[i].subject2_marks)/2});
+    }
 }
 
 const buildReportCard = () => {
